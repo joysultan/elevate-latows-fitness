@@ -22,7 +22,7 @@ export function Hero() {
       ref={ref}
       className="grain relative flex min-h-[100svh] items-end overflow-hidden"
     >
-      <motion.div style={{ y: imageY }} className="absolute inset-0 -z-10 scale-110">
+      <motion.div style={{ y: imageY }} className="absolute inset-0 z-0 scale-110">
         <img
           src={heroImage}
           alt="Athlete lifting a loaded barbell in a dark private training studio"
@@ -31,12 +31,12 @@ export function Hero() {
           className="h-full w-full object-cover"
         />
         <div className="veil absolute inset-0" />
-        <div className="absolute inset-0 bg-background/35" />
+        <div className="absolute inset-0 bg-background/20" />
       </motion.div>
 
       <motion.div
         style={{ y: contentY, opacity: fade }}
-        className="mx-auto w-full max-w-7xl px-5 pb-20 pt-36 sm:px-8 sm:pb-28"
+        className="relative z-10 mx-auto w-full max-w-7xl px-5 pb-20 pt-36 sm:px-8 sm:pb-28"
       >
         <motion.div
           initial={{ opacity: 0, y: 20 }}

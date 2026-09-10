@@ -39,13 +39,14 @@ export function TestimonialStack({ testimonials, className }: Props) {
         <AnimatePresence initial={false}>
           {visible.map((tIndex, depth) => {
             const t = testimonials[tIndex];
+            if (!t) return null;
             return (
               <motion.article
                 key={t.id}
                 drag={depth === 0 ? "x" : false}
                 dragConstraints={{ left: 0, right: 0 }}
                 dragElastic={0.5}
-                onDragEnd={depth === 0 ? onDragEnd : undefined}
+                onDragEnd={depth === 0 ? onDragEnd : () => {}}
                 initial={{ opacity: 0, scale: 0.9, y: 40 }}
                 animate={{
                   opacity: 1,
