@@ -28,7 +28,7 @@ export function Hero() {
           alt="Athlete lifting a loaded barbell in a dark private training studio"
           width={1920}
           height={1280}
-          className="h-full w-full object-cover"
+          className="h-full w-full object-cover object-[50%_15%]"
         />
         <div className="veil absolute inset-0" />
         <div className="absolute inset-0 bg-background/20" />
